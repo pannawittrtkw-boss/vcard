@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pannawit Theeratrakulwong</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Inter,sans-serif;background:#f0f4ff;min-height:100vh;display:flex;justify-content:center;padding:24px 16px;}
+.card{width:100%;max-width:360px;}
+.top{background:linear-gradient(160deg,#3b0764,#7c3aed);border-radius:24px 24px 0 0;padding:32px 24px 0;display:flex;flex-direction:column;align-items:center;position:relative;}
+.av{width:90px;height:90px;border-radius:50%;border:4px solid rgba(255,255,255,.9);overflow:hidden;background:#7c3aed;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.name{color:white;font-weight:800;font-size:22px;text-align:center;line-height:1.2;}
+.sub{color:rgba(255,255,255,.72);font-size:13px;margin-top:5px;text-align:center;}
+.note{color:rgba(255,255,255,.55);font-size:12px;margin-top:4px;text-align:center;}
+.acts{display:flex;gap:12px;margin-top:20px;padding-bottom:22px;}
+.ab{display:flex;flex-direction:column;align-items:center;gap:4px;background:rgba(255,255,255,.15);border-radius:12px;padding:10px 14px;text-decoration:none;color:white;border:1px solid rgba(255,255,255,.2);min-width:58px;}
+.ab span:first-child{font-size:20px;}.ab span:last-child{font-size:11px;font-weight:600;}
+.bot{background:white;border-radius:0 0 24px 24px;padding:18px 20px 24px;}
+.row{display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid #f1f5f9;}
+.ri{width:34px;height:34px;border-radius:9px;background:#ec489922;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.rl{font-size:11px;color:#94a3b8;}.rv{font-size:14px;font-weight:600;color:#1e293b;margin-top:1px;}
+.savebtn{width:100%;margin-top:18px;padding:14px;background:linear-gradient(135deg,#3b0764,#7c3aed);border:none;border-radius:12px;color:white;font-weight:700;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;font-family:Inter,sans-serif;}
+.hint{text-align:center;font-size:11px;color:#94a3b8;margin-top:8px;}
+</style></head><body>
+<div class="card"><div class="top">
+
+<div class="av"><span style="color:white;font-weight:800;font-size:28px;">PT</span></div>
+<div class="name">Pannawit Theeratrakulwong</div>
+<div class="sub">Sales Division Manager · Tech Legend Co., Ltd.</div>
+<div class="note">Sales Division | Tech Legend</div>
+<div class="acts"><a class="ab" href="tel:0994516999"><span>📞</span><span>Phone</span></a><a class="ab" href="mailto:pongsathorn.s@techlegend-th.com"><span>✉️</span><span>Email</span></a><a class="ab" href="https://www.techlegend-th.com" target="_blank"><span>🌐</span><span>Website</span></a></div>
+</div><div class="bot">
+<div class="row"><div class="ri">📱</div><div><div class="rl">Mobile</div><div class="rv">0994516999</div></div></div><div class="row"><div class="ri">📞</div><div><div class="rl">Phone</div><div class="rv">0827977976</div></div></div><div class="row"><div class="ri">✉️</div><div><div class="rl">Email</div><div class="rv">pongsathorn.s@techlegend-th.com</div></div></div><div class="row"><div class="ri">🌐</div><div><div class="rl">Website</div><div class="rv">https://www.techlegend-th.com</div></div></div><div class="row"><div class="ri">📍</div><div><div class="rl">Address</div><div class="rv">1265 ห้อง 301,303 หมู่ 1 ถ.เทพารักษ์ ต.เทพารักษ์ อ.เมืองสมุทรปราการ จ.สมุทรปราการ 10270</div></div></div>
+<button class="savebtn" onclick="saveVcf()">&#128190; Save to contacts &#128242;</button>
+<div class="hint">&#x1F4F1; Android &amp; iPhone</div>
+</div></div>
+<script>function saveVcf(){
+  var v="BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Pannawit Theeratrakulwong\r\nN:Theeratrakulwong;Pannawit;;;\r\nTITLE:Sales Division Manager\r\nORG:Tech Legend Co., Ltd.\r\nTEL;TYPE=CELL:0994516999\r\nTEL;TYPE=WORK:0827977976\r\nEMAIL:pongsathorn.s@techlegend-th.com\r\nURL:https://www.techlegend-th.com\r\nADR;TYPE=WORK:;;1265 ห้อง 301,303 หมู่ 1 ถ.เทพารักษ์ ต.เทพารักษ์ อ.เมืองสมุทรปราการ จ.สมุทรปราการ 10270;;;;\r\nTEL;TYPE=WORK,VOICE:02-123-4567\r\nNOTE:Sales Division | Tech Legend\r\nEND:VCARD";
+  var d="data:text/vcard;charset=utf-8,"+encodeURIComponent(v);
+  var a=document.createElement("a");
+  a.href=d;a.download="Pannawit_Theeratrakulwong.vcf";
+  document.body.appendChild(a);a.click();document.body.removeChild(a);}
+</script></body></html>

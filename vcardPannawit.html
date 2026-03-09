@@ -34,9 +34,20 @@ body{font-family:Inter,sans-serif;background:#f0f4ff;min-height:100vh;display:fl
 <div class="hint">&#x1F4F1; Android &amp; iPhone</div>
 </div></div>
 <script>function saveVcf(){
-  var v="BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Pannawit Theeratrakulwong\r\nN:Theeratrakulwong;Pannawit;;;\r\nTITLE:Sales Division Manager\r\nORG:Tech Legend Co., Ltd.\r\nTEL;TYPE=CELL:0994516999\r\nTEL;TYPE=WORK:0827977976\r\nEMAIL:pongsathorn.s@techlegend-th.com\r\nURL:https://www.techlegend-th.com\r\nADR;TYPE=WORK:;;1265 ห้อง 301,303 หมู่ 1 ถ.เทพารักษ์ ต.เทพารักษ์ อ.เมืองสมุทรปราการ จ.สมุทรปราการ 10270;;;;\r\nTEL;TYPE=WORK,VOICE:02-123-4567\r\nNOTE:Sales Division | Tech Legend\r\nEND:VCARD";
-  var d="data:text/vcard;charset=utf-8,"+encodeURIComponent(v);
-  var a=document.createElement("a");
-  a.href=d;a.download="Pannawit_Theeratrakulwong.vcf";
-  document.body.appendChild(a);a.click();document.body.removeChild(a);}
+  try{
+    var v="BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Pannawit Theeratrakulwong\r\nN:Theeratrakulwong;Pannawit;;;\r\nTITLE:Sales Division Manager\r\nORG:Tech Legend Co., Ltd.\r\nTEL;TYPE=CELL:0994516999\r\nTEL;TYPE=WORK:0827977976\r\nEMAIL:pongsathorn.s@techlegend-th.com\r\nURL:https://www.techlegend-th.com\r\nADR;TYPE=WORK:;;1265 ห้อง 301,303 หมู่ 1 ถ.เทพารักษ์ ต.เทพารักษ์ อ.เมืองสมุทรปราการ จ.สมุทรปราการ 10270;;;;\r\nTEL;TYPE=WORK,VOICE:02-123-4567\r\nNOTE:Sales Division | Tech Legend\r\nEND:VCARD";
+    var b=new Blob([v],{type:"text/vcard"});
+    var u=URL.createObjectURL(b);
+    var a=document.createElement("a");
+    a.href=u;a.download="Pannawit_Theeratrakulwong.vcf";
+    document.body.appendChild(a);a.click();
+    setTimeout(function(){URL.revokeObjectURL(u);document.body.removeChild(a);},1000);
+  }catch(e){
+    var v="BEGIN:VCARD\r\nVERSION:3.0\r\nFN:Pannawit Theeratrakulwong\r\nN:Theeratrakulwong;Pannawit;;;\r\nTITLE:Sales Division Manager\r\nORG:Tech Legend Co., Ltd.\r\nTEL;TYPE=CELL:0994516999\r\nTEL;TYPE=WORK:0827977976\r\nEMAIL:pongsathorn.s@techlegend-th.com\r\nURL:https://www.techlegend-th.com\r\nADR;TYPE=WORK:;;1265 ห้อง 301,303 หมู่ 1 ถ.เทพารักษ์ ต.เทพารักษ์ อ.เมืองสมุทรปราการ จ.สมุทรปราการ 10270;;;;\r\nTEL;TYPE=WORK,VOICE:02-123-4567\r\nNOTE:Sales Division | Tech Legend\r\nEND:VCARD";
+    var d="data:text/vcard;charset=utf-8,"+encodeURIComponent(v);
+    var a=document.createElement("a");
+    a.href=d;a.download="Pannawit_Theeratrakulwong.vcf";
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+  }
+}
 </script></body></html>
